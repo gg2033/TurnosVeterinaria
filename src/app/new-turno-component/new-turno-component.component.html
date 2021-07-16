@@ -1,0 +1,60 @@
+<form (ngSubmit)="onNewTurno(f)" #f="ngForm">
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Nombre dueño mascota</label>
+    <input 
+    type="text" 
+    class="form-control" 
+    name="name"
+    ngModel
+    placeholder="juan perez" 
+    aria-label="NombrePaciente">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email</label>
+    <input 
+    type="email" 
+    class="form-control" 
+    name="email"
+    ngModel
+    placeholder="juanperez@gmail.com" 
+    aria-label="EmailPaciente">
+  </div>
+
+  <div class="mb-3" style="display: flex; flex-direction: column;">
+    <label for="exampleFormControlTextarea1" class="form-label">Sucursal</label>
+    <select class="form-select form-select-lg mb-3" aria-label="Sucursal" ngModel name="subsidiary">
+        <option selected>Open this select menu</option>
+        <option value="1">Otamendi 145</option>
+        <option value="2">Escalada 777</option>
+        <option value="3">Ross 422</option>
+      </select>
+  </div>
+
+  <div class="mb-3" style="display: flex; flex-direction: column;">
+    <label for="exampleFormControlTextarea1" class="form-label">Fecha del turno</label>
+
+        <mat-form-field>
+          <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date" name="dateTurno" ngModel>
+          <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
+          <ngx-mat-datetime-picker #picker></ngx-mat-datetime-picker>
+        </mat-form-field>
+     
+    
+  </div>
+
+
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Breve descripción sobre el turno</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descriptionTurno" ngModel></textarea>
+  </div>
+
+  <div class="mb-3" style="display: flex;justify-content: space-between;">
+   <button class="btn btn-success mt-3" type="submit">Crear</button>
+   <button class="btn btn-info mt-3" routerLink="/home" type="submit">Volver al menu</button>
+    
+  </div>
+
+
+
+</form>

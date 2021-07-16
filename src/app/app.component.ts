@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TurnoElement } from './list-turnos-component/list-turnos-component.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TurnosOnline';
+  turnos: TurnoElement[] = [];
+
+  constructor() {
+    localStorage.setItem('turnos', JSON.stringify(this.turnos));
+  }
+
 }
