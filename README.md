@@ -1,6 +1,6 @@
 # TurnosOnline
 
-https://ggustavo90.github.io/TurnosVeterinaria/home
+https://ggustavo90.github.io/TurnosVeterinaria
 
 ## Development server
 
